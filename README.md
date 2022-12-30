@@ -1,2 +1,2 @@
 # energy-bot
-An energetic Discord bot
+An energetic Discord bot (in progress)
