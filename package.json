@@ -1,0 +1,16 @@
+{
+    "name": "energy-bot",
+    "version": "1.0.0",
+    "main": "src/index.js",
+    "scripts": {
+        "run": "node src/index.js",
+        "prettier": "npx prettier src --write"
+    },
+    "license": "MIT",
+    "dependencies": {
+        "discord.js": "^14.7.1"
+    },
+    "devDependencies": {
+        "prettier": "2.8.1"
+    }
+}
