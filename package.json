@@ -4,11 +4,15 @@
     "main": "src/index.js",
     "scripts": {
         "run": "node src/index.js",
-        "prettier": "npx prettier src --write"
+        "prettier": "npx prettier src --write",
+        "deploy-commands": "node src/commands/management/deploy-commands.js",
+        "delete-commands": "node src/commands/management/delete-commands.js"
     },
     "license": "MIT",
     "dependencies": {
-        "discord.js": "^14.7.1"
+        "discord.js": "^14.7.1",
+        "dotenv": "^16.0.3",
+        "openai": "^3.1.0"
     },
     "devDependencies": {
         "prettier": "2.8.1"

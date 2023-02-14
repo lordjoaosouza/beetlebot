@@ -1,5 +1,9 @@
 const { REST, Routes } = require('discord.js')
-const { clientId, guildId, token } = require('../../../config.json')
+
+require('dotenv').config()
+const token = process.env.BOT_TOKEN
+const clientId = process.env.CLIENT_ID
+const guildId = process.env.GUILD_ID
 
 const rest = new REST({ version: '10' }).setToken(token)
 

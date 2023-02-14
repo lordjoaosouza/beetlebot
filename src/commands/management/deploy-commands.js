@@ -1,11 +1,15 @@
 const { REST, Routes } = require('discord.js')
-const { clientId, guildId, token } = require('../../../config.json')
 const fs = require('node:fs')
+
+require('dotenv').config()
+const token = process.env.BOT_TOKEN
+const clientId = process.env.CLIENT_ID
+const guildId = process.env.GUILD_ID
 
 const commands = []
 
 const commandFiles = fs
-    .readdirSync('../')
+    .readdirSync('./src/commands')
     .filter((file) => file.endsWith('.js'))
 
 for (const file of commandFiles) {
@@ -26,7 +30,7 @@ const rest = new REST({ version: '10' }).setToken(token)
             { body: commands }
         )
 
-        console.log(`Successfully reloaded ${data.length} application (/) `)
+        console.log(`Successfully reloaded ${data.length} application (/)!`)
     } catch (error) {
         console.error(error)
     }
