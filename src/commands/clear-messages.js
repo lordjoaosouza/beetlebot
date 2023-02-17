@@ -24,7 +24,7 @@ module.exports = {
                 ephemeral: true,
             })
         } else {
-            await interaction.channel.bulkDelete(amount + 1, true)
+            await interaction.channel.bulkDelete(amount, true)
             await interaction.reply({
                 content: `Successfully deleted ${amount} messages!`,
                 ephemeral: true,
