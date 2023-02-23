@@ -2,7 +2,7 @@ const { SlashCommandBuilder } = require('discord.js')
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('clear-messages')
+        .setName('clear')
         .setDescription('Clears messages from a channel')
         .addIntegerOption((option) =>
             option

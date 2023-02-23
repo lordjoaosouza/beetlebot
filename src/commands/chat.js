@@ -1,14 +1,14 @@
 const { SlashCommandBuilder } = require('discord.js')
-const { yahooFinance } = require('yahoo-finance')
+const { openai } = require('openai')
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('ticket-price')
-        .setDescription('See ticket price')
+        .setName('chat')
+        .setDescription('Chat with ChatGPT')
         .addStringOption((option) =>
             option
-                .setName('ticket')
-                .setDescription('Ticket to see the price')
+                .setName('message')
+                .setDescription('Message to send to ChatGPT')
                 .setRequired(true)
         ),
     async execute(interaction) {},
